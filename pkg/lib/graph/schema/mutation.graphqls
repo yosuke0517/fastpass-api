@@ -1,4 +1,0 @@
-type Mutation {
-    createMessage(input: NewMessage!): Message!
-    updateMessage(userId: String!): Message!
-}
