@@ -28,3 +28,6 @@ general.log
 tmp/
 __debug_bin
 *.log
+
+/build/db/log
+/build/docker/mysql/data
