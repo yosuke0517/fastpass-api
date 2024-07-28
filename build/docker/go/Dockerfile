@@ -1,4 +1,4 @@
-FROM golang:1.19-alpine as builder
+FROM golang:1.22.4-alpine as builder
 
 RUN apk --no-cache add gcc musl-dev
 
@@ -26,7 +26,7 @@ COPY --from=builder /app/main .
 
 CMD ["./main"]
 
-FROM golang:1.19-alpine3.17 as dev
+FROM golang:1.22.4-alpine3.17 as dev
 
 ENV CGO_ENABLED 0
 ENV GO111MODULE auto
