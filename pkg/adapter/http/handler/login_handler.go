@@ -39,7 +39,7 @@ func (l *LoginHandler) LoginHandler() echo.HandlerFunc {
 
 		userId, err := l.AuthUseCase.Login(c, fv)
 		if err != nil {
-			return fmt.Errorf("login failed err: %w", err)
+			return fmt.Errorf("login failed!! err: %w", err)
 		}
 
 		return c.JSON(http.StatusOK, echo.Map{
