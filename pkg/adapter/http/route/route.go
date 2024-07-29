@@ -79,7 +79,7 @@ func (i *InitRoute) InitRouting(cfg *config.Config) (*echo.Echo, error) {
 
 	// Route
 	e.GET("/healthcheck", func(c echo.Context) error {
-		return c.String(http.StatusOK, "New deployment is successful")
+		return c.String(http.StatusOK, "healthy!!")
 	})
 	e.GET("/csrf-cookie", i.Ch.CsrfHandler())
 	e.POST("/login", i.Lh.LoginHandler())
